@@ -116,5 +116,8 @@ hide_category_exceptions:
   default: '' 
   description: 'Headers will not show for these categories'
 
-
+extra_icons:
+  default: "info-circle"
+  description:
+    en: Extra icons to load for the theme component. There is no need to change this setting.
 
