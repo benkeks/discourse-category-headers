@@ -1,8 +1,9 @@
 <script type="text/discourse-plugin" version="0.8">
   const container = Discourse.__container__;
   const { h } = require('virtual-dom');
-  const { iconNode } = require("discourse-common/lib/icon-library");
+  const { iconNode, iconHTML } = require("discourse-common/lib/icon-library");
   let lockIcon = iconNode('lock');
+  let infoIconHTML = iconHTML('info-circle');
 
   api.createWidget('category-header-widget', {
       tagName: 'span',
@@ -34,7 +35,7 @@
 
                   function catDesc() {
                       if(settings.show_category_description) {
-                          const infoLink = category.topic_url ? ` <a href="${category.topic_url}">${iconHTML('info-circle')}</a>` : "";
+                          const infoLink = category.topic_url ? ` <a href="${category.topic_url}">${infoIconHTML}</a>` : "";
                           return h('div.cooked', {innerHTML: category.description + infoLink});
                       }
                   }
