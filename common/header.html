@@ -34,7 +34,8 @@
 
                   function catDesc() {
                       if(settings.show_category_description) {
-                          return h('div.cooked', {innerHTML: category.description});
+                          console.log(category);
+                          return h('div.cooked', {innerHTML: "<a href=\"" + category.topic_url + "\">" + category.description + "</a>"});
                       }
                   }
                   
