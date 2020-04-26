@@ -34,7 +34,7 @@
 
                   function catDesc() {
                       if(settings.show_category_description) {
-                          const infoLink = category.topic_url ? ` <a href="${category.topic_url}"><svg class="fas fa-info-circle svg-icon svg-node" aria-hidden="true"></svg></a>` : "";
+                          const infoLink = category.topic_url ? ` <a href="${category.topic_url}">${iconHTML('info-circle')}</a>` : "";
                           return h('div.cooked', {innerHTML: category.description + infoLink});
                       }
                   }
